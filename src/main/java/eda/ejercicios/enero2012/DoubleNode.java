@@ -1,6 +1,5 @@
 package eda.ejercicios.enero2012;
 
-@Deprecated
 public class DoubleNode<T> {
 
     public T data;
