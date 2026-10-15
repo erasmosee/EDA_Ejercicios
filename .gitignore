@@ -1,0 +1,5 @@
+target/
+*.class
+.DS_Store
+Thumbs.db
+EDA_Ejercicios.code-workspace
