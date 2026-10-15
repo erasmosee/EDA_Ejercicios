@@ -1,5 +1,8 @@
 package eda.ejercicios.enero2012;
 
+import eda.ejercicios.Base.Node;
+import eda.ejercicios.Base.SimpleLinkedList;
+
 public class PruebasEnero2012 {
 
 

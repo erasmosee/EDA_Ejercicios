@@ -1,5 +1,10 @@
 package eda.ejercicios.enero2012;
 
+import eda.ejercicios.Base.DoubleLinkedList;
+import eda.ejercicios.Base.DoubleNode;
+import eda.ejercicios.Base.Node;
+import eda.ejercicios.Base.SimpleLinkedList;
+
 public class ListaDePalabras extends DoubleLinkedList<String> {
 
     public SimpleLinkedList<String> obtenerContexto(String pal, Integer n) {

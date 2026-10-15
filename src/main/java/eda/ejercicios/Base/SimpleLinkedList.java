@@ -1,8 +1,8 @@
-package eda.ejercicios.enero2012;
+package eda.ejercicios.Base;
 
 public class SimpleLinkedList<T> {
 
-    Node<T> first;
+    public Node<T> first;
 
     public SimpleLinkedList() {
         first = null;

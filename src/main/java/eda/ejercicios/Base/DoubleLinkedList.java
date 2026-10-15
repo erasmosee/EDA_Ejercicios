@@ -1,8 +1,8 @@
-package eda.ejercicios.enero2012;
+package eda.ejercicios.Base;
 
 public class DoubleLinkedList<T> {
 
-    DoubleNode<T> first;
+    public DoubleNode<T> first;
 
     public DoubleLinkedList() {
         first = null;
