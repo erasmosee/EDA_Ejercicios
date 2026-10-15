@@ -1,11 +1,11 @@
-package eda.ejercicios.enero2012;
+package eda.ejercicios.examenes;
 
 import eda.ejercicios.Base.DoubleLinkedList;
 import eda.ejercicios.Base.DoubleNode;
 import eda.ejercicios.Base.Node;
 import eda.ejercicios.Base.SimpleLinkedList;
 
-public class ListaDePalabras extends DoubleLinkedList<String> {
+public class Enero2012ListaDePalabras extends DoubleLinkedList<String> {
 
     public SimpleLinkedList<String> obtenerContexto(String pal, Integer n) {
         SimpleLinkedList<String> listaSalida = new SimpleLinkedList<>();
@@ -48,6 +48,21 @@ public class ListaDePalabras extends DoubleLinkedList<String> {
         // En caso de que no haya n palabras delante o detrás de “pal”
         // se devolverán solamente las que hay
         return listaSalida;
+    }
+
+     public static String mostrar(SimpleLinkedList<String> lista) {
+        StringBuilder resultado = new StringBuilder();
+        Node<String> actual = lista.first;
+
+        while (actual != null) {
+            if (resultado.length() > 0) {
+                resultado.append(" -> ");
+            }
+            resultado.append(actual.data);
+            actual = actual.next;
+        }
+
+        return resultado.toString();
     }
 
 }
