@@ -9,4 +9,9 @@ public class Node<T> {
         data = dd;
         next = null;
     }
+    public T getData(){
+        return this.data;
+    }
+    
 }
+

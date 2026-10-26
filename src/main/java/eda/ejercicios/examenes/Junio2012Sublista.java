@@ -78,7 +78,7 @@ public class Junio2012Sublista {
                     // current de listaGrande es mayor que current de listaPequena, listaPequena no esta contenida en listaGrande.
                     todoCorrecto = false;
                 }
-            } while (todoCorrecto && currentLP.next != null && currentLG.next != null);
+            } while (todoCorrecto && currentLP != null && currentLG != null);
 
             return todoCorrecto;
         }
