@@ -8,21 +8,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // probarEnero2012();
-        probarJunio2012();
-        probarJunio2017();
+        probarEnero2012();
+        // probarJunio2012();
+        //  probarJunio2017();
     }
 
     public static void probarEnero2012() {
 
-        Enero2012ListaDePalabras palabras = new Enero2012ListaDePalabras();
+        Enero2012ListaDePalabras ejercicio = new Enero2012ListaDePalabras();
+        Enero2012ListaDePalabras.ListaDePalabras listaPalabras = ejercicio.new ListaDePalabras();
+        String[] palabras = {"la", "casa", "es", "bonita", "acogedora", "y", "luminosa", "un", "hogar", "perfecto", "para", "descansar", "en", "paz"};
 
-        palabras.addToRear("la");
-        palabras.addToRear("casa");
-        palabras.addToRear("es");
-        palabras.addToRear("bonita");
+        Enero2012ListaDePalabras.DoubleNode<String> primero
+                = new Enero2012ListaDePalabras.DoubleNode<>(palabras[0]);
+        listaPalabras.first = primero;
 
-        System.out.println(Enero2012ListaDePalabras.mostrar(palabras.obtenerContexto("es", 2)));
+        Enero2012ListaDePalabras.DoubleNode<String> actual = primero;
+        for (int i = 1; i < palabras.length; i++) {
+            Enero2012ListaDePalabras.DoubleNode<String> siguiente = new Enero2012ListaDePalabras.DoubleNode<>(palabras[i]);
+            actual.next = siguiente;
+            siguiente.prev = actual;
+            actual = siguiente;
+        }
+
+         Enero2012ListaDePalabras.Node<String> nodo = listaPalabras.obtenerContexto("luminosa", 3).first;
+
+        System.out.print("[");
+        while (nodo != null) {
+            System.out.print(nodo.data);
+            nodo = nodo.next;
+            if (nodo != null) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
     }
 
     public static void probarJunio2012() {

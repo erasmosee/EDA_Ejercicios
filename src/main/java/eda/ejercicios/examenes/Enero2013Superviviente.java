@@ -2,6 +2,8 @@ package eda.ejercicios.examenes;
 
 public class Enero2013Superviviente {
 
+    public DoubleLinkedList<Integer> lista;
+
     public class DoubleNode<T> {
 
         public T data;
