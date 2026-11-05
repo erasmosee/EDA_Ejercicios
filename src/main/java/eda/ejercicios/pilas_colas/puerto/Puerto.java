@@ -1,4 +1,4 @@
-package eda.ejercicios.pilas_colas_puerto;
+package eda.ejercicios.pilas_colas.puerto;
 
 import java.util.Queue;
 import java.util.Stack;
@@ -15,12 +15,12 @@ public class Puerto {
             Barco barco = barcos.poll();
             if (barco.getTipo() == Barco.CARGA) {
                 while (!barco.getPeticiones().isEmpty()) {
-                    Peticion p = barco.peticiones.poll();
+                    Peticion p = (Peticion) barco.getPeticiones().poll();
                     while(!muelles[p.muelle].peek().equals(p.codigoContenedor)){
                         muelles[0].push(muelles[p.muelle].pop());
                     }
                     String contenedor = muelles[p.muelle].pop();
-                    System.out.println("Contenedor " + contenedor + " movido al " + barco.nombre);
+                    System.out.println("Contenedor " + contenedor + " movido al " + barco.getNombre());
                     while(!muelles[0].isEmpty()){
                         muelles[p.muelle].push(muelles[0].pop());
                     }
@@ -28,9 +28,9 @@ public class Puerto {
             }else{
                 int atendidos = 0;
                 while (!barco.peticiones.isEmpty() && atendidos < maxPeticiones){
-                    Peticion p = barco.peticiones.poll();
+                    Peticion p = (Peticion) barco.getPeticiones().poll();
                     muelles[p.muelle].push(p.codigoContenedor);
-                    System.out.println("Contenedor " + p.codigoContenedor + " movido del " + barco.nombre);
+                    System.out.println("Contenedor " + p.codigoContenedor + " movido del " + barco.getNombre());
 
                     atendidos++;
                 }

@@ -1,4 +1,4 @@
-package eda.ejercicios.pilas_colas_cafeteria;
+package eda.ejercicios.pilas_colas.cafeteria;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,7 +8,7 @@ public class Cafeteria {
 
     public void insertar(Integer elem) {
         if (cola == null) {
-            cola = new LinkedList<Queue<Integer>>();
+            cola = new LinkedList<>();
         }
         boolean colocado = false;
         for (int i = 0; i < cola.size(); i++) {
@@ -20,7 +20,7 @@ public class Cafeteria {
             cola.offer(grupo);
         }
         if (!colocado) {
-            Queue<Integer> grupoNuevo = new LinkedList<Integer>();
+            Queue<Integer> grupoNuevo = new LinkedList<>();
             grupoNuevo.offer(elem);
             cola.offer(grupoNuevo);
         }

@@ -1,4 +1,4 @@
-package eda.ejercicios.pilas_colas_puerto;
+package eda.ejercicios.pilas_colas.puerto;
 
 import java.util.Queue;
 
@@ -10,9 +10,12 @@ public class Barco {
     String nombre;
     Queue<Peticion> peticiones;
 
-
     public int getTipo() {
         return this.tipo;
+    }
+
+    public String getNombre() {
+        return this.nombre;
     }
 
     public Queue<Peticion> getPeticiones() {
