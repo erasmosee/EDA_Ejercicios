@@ -1,4 +1,4 @@
-package eda.ejercicios.examenes;
+package eda.ejercicios.linked_list;
 
 public class Enero2020ListaSimetrica {
     public SimpleLinkedList<Integer> lista;

@@ -1,4 +1,4 @@
-package eda.ejercicios.examenes;
+package eda.ejercicios.linked_list;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package eda.ejercicios.colas;
+package eda.ejercicios.pilas_colas_cafeteria;
 
 import java.util.LinkedList;
 import java.util.Queue;

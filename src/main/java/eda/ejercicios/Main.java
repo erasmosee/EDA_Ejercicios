@@ -1,8 +1,8 @@
 package eda.ejercicios;
 
-import eda.ejercicios.examenes.Enero2012ListaDePalabras;
-import eda.ejercicios.examenes.Junio2012Sublista;
-import eda.ejercicios.examenes.Junio2017Sublista;
+import eda.ejercicios.linked_list.Enero2012ListaDePalabras;
+import eda.ejercicios.linked_list.Junio2012Sublista;
+import eda.ejercicios.linked_list.Junio2017Sublista;
 
 public class Main {
 
