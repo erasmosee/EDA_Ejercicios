@@ -65,7 +65,7 @@ public class RedDeOrdenadores {
         return costes;
     }
 
-    public void iniciarMatriz() {
+    public Boolean[][] iniciarMatriz() {
         adjMatrix = new Boolean[11][11];
         System.out.println("Inicio");
 
@@ -74,27 +74,7 @@ public class RedDeOrdenadores {
                 adjMatrix[i][j] = false;
             }
         }
-        adjMatrix[0][2] = true;
-        adjMatrix[0][3] = true;
-        adjMatrix[1][8] = true;
-        adjMatrix[1][9] = true;
-        adjMatrix[2][4] = true;
-        adjMatrix[3][7] = true;
-        adjMatrix[3][10] = true;
-        adjMatrix[4][5] = true;
-        adjMatrix[5][1] = true;
-        adjMatrix[5][7] = true;
-        adjMatrix[7][10] = true;
-
-        int contador = 0;
-        for (int precio : obtenerCostes()) {
-            // if (precio > 0) {
-            System.out.println(contador + " - " + precio);
-            // }
-            contador++;
-
-        }
-        System.out.println("Fin");
-
+       
+        return adjMatrix;
     }
 }

@@ -9,33 +9,59 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RedDeOrdenadores redDeOrdenadores = new RedDeOrdenadores();
-        redDeOrdenadores.iniciarMatriz();
-
-        //probarEnero2012();
+        probarRedDeOrdenadores();
+        // probarEnero2012();
         // probarJunio2012();
-        //  probarJunio2017();
+        // probarJunio2017();
+    }
+
+    public static void probarRedDeOrdenadores() {
+        Boolean[][] adjMatrix = new Boolean[11][11];
+        RedDeOrdenadores redDeOrdenadores = new RedDeOrdenadores();
+        adjMatrix = redDeOrdenadores.iniciarMatriz();
+        adjMatrix[0][2] = true;
+        adjMatrix[0][3] = true;
+        adjMatrix[1][8] = true;
+        adjMatrix[1][9] = true;
+        adjMatrix[2][4] = true;
+        adjMatrix[3][7] = true;
+        adjMatrix[3][10] = true;
+        adjMatrix[4][5] = true;
+        adjMatrix[5][1] = true;
+        adjMatrix[5][7] = true;
+        adjMatrix[7][10] = true;
+
+        int contador = 0;
+        for (int precio : redDeOrdenadores.obtenerCostes()) {
+            // if (precio > 0) {
+            System.out.println("nodo: "+contador + " precio: " + precio);
+            // }
+            contador++;
+
+        }
+
     }
 
     public static void probarEnero2012() {
 
         Enero2012ListaDePalabras ejercicio = new Enero2012ListaDePalabras();
         Enero2012ListaDePalabras.ListaDePalabras listaPalabras = ejercicio.new ListaDePalabras();
-        String[] palabras = {"la", "casa", "es", "bonita", "acogedora", "y", "luminosa", "un", "hogar", "perfecto", "para", "descansar", "en", "paz"};
+        String[] palabras = { "la", "casa", "es", "bonita", "acogedora", "y", "luminosa", "un", "hogar", "perfecto",
+                "para", "descansar", "en", "paz" };
 
-        Enero2012ListaDePalabras.DoubleNode<String> primero
-                = new Enero2012ListaDePalabras.DoubleNode<>(palabras[0]);
+        Enero2012ListaDePalabras.DoubleNode<String> primero = new Enero2012ListaDePalabras.DoubleNode<>(palabras[0]);
         listaPalabras.first = primero;
 
         Enero2012ListaDePalabras.DoubleNode<String> actual = primero;
         for (int i = 1; i < palabras.length; i++) {
-            Enero2012ListaDePalabras.DoubleNode<String> siguiente = new Enero2012ListaDePalabras.DoubleNode<>(palabras[i]);
+            Enero2012ListaDePalabras.DoubleNode<String> siguiente = new Enero2012ListaDePalabras.DoubleNode<>(
+                    palabras[i]);
             actual.next = siguiente;
             siguiente.prev = actual;
             actual = siguiente;
         }
 
-         Enero2012ListaDePalabras.Node<String> nodo = listaPalabras.obtenerContexto("luminosa", 3).first;
+        Enero2012ListaDePalabras.Node<String> nodo = listaPalabras.obtenerContexto("luminosa", 3).first;
 
         System.out.print("[");
         while (nodo != null) {
