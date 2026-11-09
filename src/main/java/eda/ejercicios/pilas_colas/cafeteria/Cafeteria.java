@@ -30,11 +30,11 @@ public class Cafeteria {
         return true;
     }
 
-    public Integer borrar() {
-        Integer retorno = cola.peek().poll();
-        if (cola.peek().isEmpty()) {
+    public Integer borrar() { //
+        while (cola.peek().isEmpty()) {
             cola.poll();
         }
-        return retorno;
+        return cola.peek().poll();
+
     }
 }
