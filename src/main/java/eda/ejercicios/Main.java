@@ -3,12 +3,16 @@ package eda.ejercicios;
 import eda.ejercicios.linked_list.Enero2012ListaDePalabras;
 import eda.ejercicios.linked_list.Junio2012Sublista;
 import eda.ejercicios.linked_list.Junio2017Sublista;
+import eda.ejercicios.pilas_colas.reddeordenadores.RedDeOrdenadores;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        probarEnero2012();
+        RedDeOrdenadores redDeOrdenadores = new RedDeOrdenadores();
+        redDeOrdenadores.iniciarMatriz();
+
+        //probarEnero2012();
         // probarJunio2012();
         //  probarJunio2017();
     }
